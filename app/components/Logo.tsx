@@ -9,8 +9,7 @@ export function Logo() {
     background-color: rgba(51, 51, 51, 0);
     padding: 20px;
     text-align: center;
-    // Add the text-white class for white text in dark mode 
-    ${props => props.theme === 'dark' ? 'text-white' : 'text-black'}
+    // Add the text-white class for white text in dark mode
   `;
 
     const Title = styled.h1`
@@ -20,6 +19,6 @@ export function Logo() {
     const { resolvedTheme } = useTheme(); // Use the useTheme hook to get the current theme
 
     return (
-        <Header theme={resolvedTheme}><Title>TANNENKRUG</Title></Header>
+        <Header><Title>TANNENKRUG</Title></Header>
     );
 }
