@@ -1,8 +1,6 @@
 import Image from 'next/image'
 import React from 'react';
-import PDFViewer from './components/PDFViewer';
 import Link from "next/link";
-import {Logo} from "./components/Logo";
 
 
 export default function Home() {
