@@ -1,22 +1,20 @@
 import Image from 'next/image'
 import React from 'react';
 import Link from "next/link";
-
+import styles from "./page.css"
 
 export default function Home() {
   let pdfUrl = 'Speisekarte.pdf';
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-          <Image alt={"Tannenkrug"} src={'/Logo.png'}
-                 className="dark:invert"
-                 width={350}
-                 height={24}
-                 priority
-          ></Image>
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+        <div>
+            <Image alt={"Tannenkrug"} src={'/Logo.png'}
+                   className="dark:invert"
+                   width={350}
+                   height={24}
+                   priority
+            ></Image>
+        </div>
         <Link
           href={'Speisekarte.pdf'}
           className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
@@ -31,7 +29,35 @@ export default function Home() {
           </h2>
 
         </Link>
-      </div>
+
+        <div className="min-h-screen py-8">
+            <div className="container mx-auto">
+                <header>
+                    <h1 className="text-center text-4xl font-bold text-standard dark:invert mb-4">Der Tannenkrug: Ihr Gemütlicher Treffpunkt für Genuss und Unterhaltung</h1>
+                    <p className="text-lg text-gray-600">Herzlich willkommen im Tannenkrug, der Gaststätte, die sich wahrlich von anderen abhebt! Wenn Sie auf der Suche nach einem einladenden Ort für ein unvergessliches Essen, gemütliche Abende mit Freunden oder sogar einer Runde Kegeln sind, dann sind Sie hier genau richtig.</p>
+                </header>
+
+                <section className="mt-8">
+                    <h2 className="text-center text-2xl font-semibold text-standard dark:invert">Gutbürgerliche Küche, die Herzen höherschlagen lässt</h2>
+                    <p className="text-lg text-gray-600">Unsere Gaststätte ist stolz darauf, Ihnen eine köstliche Auswahl an gutbürgerlichen Gerichten anzubieten. Egal, ob Sie Lust auf eine frische Italienische Pizza, zarte Schnitzel, frischen Fisch oder vegetarische Spezialitäten haben – unser Menü hat für jeden Gaumen etwas zu bieten. Unsere Speisen werden mit Liebe zubereitet und spiegeln die Tradition und Qualität wider, für die der Tannenkrug bekannt ist.</p>
+                </section>
+
+                <section className="mt-8">
+                    <h2 className="text-center text-2xl font-semibold text-standard dark:invert">Die Tannenkrug-Kegelbahn: Spaß für Jung und Alt</h2>
+                    <p className="text-lg text-gray-600">Ein Highlight unseres Angebots ist zweifellos unsere hauseigene Kegelbahn. Sie ist der perfekte Ort für gesellige Stunden mit Familie und Freunden. Stellen Sie sich vor, wie Sie die Kegel umwerfen, während Sie sich von den kulinarischen Köstlichkeiten und erfrischenden Getränken verwöhnen lassen. Unabhängig von Ihrem Kegelgeschick garantieren wir Ihnen eine Menge Spaß und Unterhaltung!</p>
+                </section>
+
+                <section className="mt-8">
+                    <h2 className="text-center text-2xl font-semibold text-standard dark:invert">Atmosphäre, die verzaubert</h2>
+                    <p className="text-lg text-gray-600">Der Tannenkrug besticht nicht nur durch sein hervorragendes Essen und seine Kegelbahn, sondern auch durch sein gemütliches Ambiente. Unser freundliches und aufmerksames Personal sorgt dafür, dass Sie sich wie zu Hause fühlen, und unsere rustikale Einrichtung lädt zum Verweilen ein. Egal, ob Sie drinnen oder draussen Platz nehmen – hier erleben Sie Wohlfühlatmosphäre pur.</p>
+                </section>
+
+                <footer className="mt-8 text-center text-gray-600">
+                    <p>Unsere Öffnungszeiten:</p>
+                    <p>Montag bis Sonntag: 11:00 Uhr - 00:00 Uhr</p>
+                </footer>
+            </div>
+        </div>
     </main>
   )
 }
